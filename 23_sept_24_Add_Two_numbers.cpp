@@ -13,7 +13,32 @@ struct ListNode {
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        // Implementation will go here
+        ListNode* dummyHead = new ListNode(0); // Dummy head for the result list
+        ListNode* current = dummyHead; // Pointer to build the new list
+        int carry = 0; // Initialize carry to 0
+
+        // Loop until both lists are exhausted and no carry remains
+        while (l1 != nullptr || l2 != nullptr || carry != 0) {
+            int sum = carry; // Start with the carry
+
+            // Add the value from l1 if available
+            if (l1 != nullptr) {
+                sum += l1->val;
+                l1 = l1->next; // Move to the next node in l1
+            }
+
+            // Add the value from l2 if available
+            if (l2 != nullptr) {
+                sum += l2->val;
+                l2 = l2->next; // Move to the next node in l2
+            }
+
+            carry = sum / 10; // Calculate new carry
+            current->next = new ListNode(sum % 10); // Create a new node with the digit
+            current = current->next; // Move to the next node in the result list
+        }
+
+        return dummyHead->next; // Return the next node of dummy head (the actual result)
     }
 };
 
