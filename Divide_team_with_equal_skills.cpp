@@ -5,12 +5,13 @@ using namespace std;
 int main()
 {
     int n;
+    int sum = 0;
     if (n % 2 != 0)
     {
         cout << "-1";
         exit(0);
     }
-    int last = n - 1, first = 0;
+    int chem = 0;
     cout << "Enter the number of the elements : ";
     cin >> n;
     vector<int> v(n);
@@ -20,8 +21,25 @@ int main()
         cin >> v[i];
     }
     sort(v.begin(), v.end());
-    
-    
+    int last = v.size() - 1, first = 0;
+    chem = v[last] + v[first];
+
+    while (first < last)
+    {
+        if (v[first] + v[last] == chem)
+        {
+            sum = sum + (v[first] * v[last]);
+        }
+        else
+        {
+            cout<<"Element is not good";
+            exit(0);
+        }
+        --last;  // Move backward from the end
+        ++first; // Move forward from the start
+    }
+
+    cout << "\n" << sum;
     return 0;
 }
 
