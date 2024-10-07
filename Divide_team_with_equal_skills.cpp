@@ -14,21 +14,21 @@ int main()
     int chem = 0;
     cout << "Enter the number of the elements : ";
     cin >> n;
-    vector<int> v(n);
+    vector<int> skill(n);
     cout << "Enter the elements : \n";
-    for (int i = 0; i < v.size(); i++)
+    for (int i = 0; i < skill.size(); i++)
     {
-        cin >> v[i];
+        cin >> skill[i];
     }
-    sort(v.begin(), v.end());
-    int last = v.size() - 1, first = 0;
-    chem = v[last] + v[first];
+    sort(skill.begin(), skill.end());
+    int last = skill.size() - 1, first = 0;
+    chem = skill[last] + skill[first];
 
     while (first < last)
     {
-        if (v[first] + v[last] == chem)
+        if (skill[first] + skill[last] == chem)
         {
-            sum = sum + (v[first] * v[last]);
+            sum = sum + (skill[first] * skill[last]);
         }
         else
         {
@@ -44,16 +44,16 @@ int main()
 }
 
 /*
-Divide Players Into Teams of Equal Skill
+Diskillide Players Into Teams of Equal Skill
 
 
 Hint
-You are given a positive integer array skill of even length n where skill[i] denotes the skill of the ith player.
-Divide the players into n / 2 teams of size 2 such that the total skill of each team is equal.
+You are giskillen a positiskille integer array skill of eskillen length n where skill[i] denotes the skill of the ith player.
+Diskillide the players into n / 2 teams of size 2 such that the total skill of each team is equal.
 
 The chemistry of a team is equal to the product of the skills of the players on that team.
 
-Return the sum of the chemistry of all the teams, or return -1 if there is no way to divide the players
+Return the sum of the chemistry of all the teams, or return -1 if there is no way to diskillide the players
 into teams such that the total skill of each team is equal.
 
 
@@ -63,7 +63,7 @@ Example 1:
 Input: skill = [3,2,5,1,3,4]
 Output: 22
 Explanation:
-Divide the players into the following teams: (1, 5), (2, 4), (3, 3), where each team has a total skill of 6.
+Diskillide the players into the following teams: (1, 5), (2, 4), (3, 3), where each team has a total skill of 6.
 The sum of the chemistry of all the teams is: 1 * 5 + 2 * 4 + 3 * 3 = 5 + 8 + 9 = 22.
 Example 2:
 
@@ -77,12 +77,12 @@ Example 3:
 Input: skill = [1,1,2,3]
 Output: -1
 Explanation:
-There is no way to divide the players into teams such that the total skill of each team is equal.
+There is no way to diskillide the players into teams such that the total skill of each team is equal.
 
 
 Constraints:
 
 2 <= skill.length <= 10^5
-skill.length is even.
+skill.length is eskillen.
 1 <= skill[i] <= 1000
 */
