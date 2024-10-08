@@ -10,6 +10,7 @@ int main()
     cin>>n;
     vector<int> v(n);
     vector<int> copy(n);
+    int k = 0;
     
     for(int i=0;i<n;i++)
     {
@@ -20,14 +21,25 @@ int main()
 
     sort(v.begin(),v.end());
 
-    cout<<"Output is  : \n";
+   
+    for(int i=0;i<n;i++)
+    {
+        if(v[i]!=0)
+        {
+            copy[k++]=v[i];
+        }
+
+    }
+     cout<<"Output is with zero  : \n";
     for(int i=0;i<n;i++)
     {
         cout<<v[i]<<" ";
     }
-    for(int i=0;i<n;i++)
+    cout<<endl;
+    cout<<"Output is without zero  : \n";
+    for(int i=0;i<k;i++)
     {
-        cout<<v[i]<<" ";
+        cout<<copy[i]<<" ";
     }
     
     return 0;
