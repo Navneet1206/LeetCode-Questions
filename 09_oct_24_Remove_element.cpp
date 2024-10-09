@@ -1,12 +1,41 @@
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
+
 using namespace std;
 int main()
 {
-     
+    int n;
+    int vol,k = 0,count=0;
+    cout << "Enter the number of the elements : ";
+    cin >> n;
+    vector<int> skill(n);
+    vector<int> copy(n);
+    cout << "Enter the elements : \n";
+    for (int i = 0; i < skill.size(); i++)
+    {
+        cin >> skill[i];
+    }
+    cout << "Enter the vol value : ";
+    cin >> vol;
+   
+    for(int i = 0;i<n;i++)
+    {
+        if(skill[i]!=vol)
+        {
+            copy[k++]=skill[i];
+            count++;
+        }
+    }
+    cout<<"\nOutput : "<<count<<"\n";
+    for (int i = 0; i < skill.size(); i++)
+    {
+        cout<< copy[i]<<" ";
+    }
+
+    
+
     return 0;
 }
-
 /*
 27. Remove Element
 
