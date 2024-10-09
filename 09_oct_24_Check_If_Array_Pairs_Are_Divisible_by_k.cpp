@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
+
 using namespace std;
 int main()
 {
     int n, count = 0;
-    int sum = 0;
     int chem;
     cout << "Enter the number of the elements : ";
     cin >> n;
