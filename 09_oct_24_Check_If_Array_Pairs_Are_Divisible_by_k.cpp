@@ -1,3 +1,37 @@
+/*
+Using map
+
+class Solution {
+public:
+    bool canArrange(vector<int>& arr, int k) {
+        // Create a frequency map to store remainders
+        vector<int> remainderFreq(k, 0);
+
+        // Count frequency of each remainder when divided by k
+        for (int num : arr) {
+            int remainder = (num % k + k) % k;  // Handle negative numbers
+            remainderFreq[remainder]++;
+        }
+
+        // Check if pairs can be formed
+        if (remainderFreq[0] % 2 != 0) {
+            return false;  // Remainder 0 needs to form pairs with itself
+        }
+
+        for (int i = 1; i <= k / 2; i++) {
+            if (remainderFreq[i] != remainderFreq[k - i]) {
+                return false;  // Remainder i should match remainder k-i
+            }
+        }
+
+        return true;
+    }
+};
+
+*/
+
+//It cannot handel negative value
+
 #include <iostream>
 #include <vector>
 

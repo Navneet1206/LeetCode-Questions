@@ -5,37 +5,36 @@ using namespace std;
 int main()
 {
     int n;
-    int vol,k = 0,count=0;
+    int vol, k = 0, count = 0;
     cout << "Enter the number of the elements : ";
     cin >> n;
-    vector<int> skill(n);
+    vector<int> nums(n);
     vector<int> copy(n);
     cout << "Enter the elements : \n";
-    for (int i = 0; i < skill.size(); i++)
+    for (int i = 0; i < nums.size(); i++)
     {
-        cin >> skill[i];
+        cin >> nums[i];
     }
     cout << "Enter the vol value : ";
     cin >> vol;
-   
-    for(int i = 0;i<n;i++)
+
+    for (int i = 0; i < n; i++)
     {
-        if(skill[i]!=vol)
+        if (nums[i] != vol)
         {
-            copy[k++]=skill[i];
+            copy[k++] = nums[i];
             count++;
         }
     }
-    cout<<"\nOutput : "<<count<<"\n";
-    for (int i = 0; i < skill.size(); i++)
+    cout << "\nOutput : " << count << "\n";
+    for (int i = 0; i < nums.size(); i++)
     {
-        cout<< copy[i]<<" ";
+        cout << copy[i] << " ";
     }
-
-    
 
     return 0;
 }
+
 /*
 27. Remove Element
 
@@ -63,7 +62,7 @@ for (int i = 0; i < actualLength; i++) {
 }
 If all assertions pass, then your solution will be accepted.
 
- 
+
 
 Example 1:
 
@@ -78,7 +77,7 @@ Output: 5, nums = [0,1,4,0,3,_,_,_]
 Explanation: Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.
 Note that the five elements can be returned in any order.
 It does not matter what you leave beyond the returned k (hence they are underscores).
- 
+
 
 Constraints:
 
@@ -87,5 +86,3 @@ Constraints:
 0 <= val <= 100
 
 */
-
-
