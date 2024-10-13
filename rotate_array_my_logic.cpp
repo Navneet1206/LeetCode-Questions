@@ -1,6 +1,6 @@
-//In My logic have issue to time exceed. because I am using nested loop.
-//due to use of the nested loop compiler takes time to run the code in large input.
-//For solving this problem I should have used recursion for fast code compilation time.
+// My current logic encounters a time limit issue because it relies on a nested loop structure.
+// The use of nested loops significantly increases the time complexity, causing the program to take longer to execute, especially with large input sizes.
+// To address this performance problem, I should consider implementing a recursive approach, which can reduce the execution time and improve efficiency for handling larger datasets.
 
 
 #include <iostream>
