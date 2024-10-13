@@ -1,3 +1,8 @@
+//In My logic have issue to time exceed. because I am using nested loop.
+//due to use of the nested loop compiler takes time to run the code in large input.
+//For solving this problem I should have used recursion for fast code compilation time.
+
+
 #include <iostream>
 #include <vector>
 using namespace std;
